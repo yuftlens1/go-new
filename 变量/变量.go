@@ -1,5 +1,9 @@
 package main //#声明man包，声明是主函数执行。所有的go语言都是从main这个包开始执行！
-import "fmt" //#导入现有的输入输出的框架
+import (
+	"fmt" //#导入现有的输入输出的框架
+	"reflect"
+)
+
 /*
 go是静态语言。静态语言和动态语言的变量相比差异很大
 
@@ -33,6 +37,7 @@ func main() {
 	//num := 13
 	fmt.Println(name, age, namea, ok, okk, num)
 	fmt.Println(user1, user2, user3)
+	fmt.Println("ok 该变量的类型是:", reflect.TypeOf(ok)) //输出变量的数据类型
 }
 
 /*
