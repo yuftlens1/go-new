@@ -1,15 +1,16 @@
-package main //#声明man包，声明是主函数执行。所有的go语言都是从main这个包开始执行！            强制推荐使用 Go Modules（所有新项目）
+// 强制推荐使用 Go Modules（所有新项目）  ;     切换到你的 项目根目录（即包含 main.go 和 db/ 文件夹的目录）   cd ~/go/src/study && go mod init github.com/yuftlens1/go-new && cat go.mod  #!!!
+package main //#声明man包，声明是主函数执行。所有的go语言都是从main这个包开始执行！
 
 import (
-	"C:\Users\YuFan\go\src\study\db"                 //导入db包
-	"fmt"                      //导入现有的输入输出的框架
+	"fmt" //导入现有的输入输出的框架
+
+	"github.com/yuftlens1/go-new/db" //导入db包      对应上面的go mod init
 )
 
 func main() { //#func代表一个函数
 	fmt.Println("加油")
 	fmtEnvv := fmt.Sprintf("Environment: %s, Version: %d", "百分号S的参数;后面十进制表示", 0x12)
 	fmt.Println(fmtEnvv)
-
 
 	fmt.Println("Todo list", db.Todos)
 }
