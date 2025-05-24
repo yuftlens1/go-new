@@ -1,11 +1,17 @@
-package main //#声明man包，声明是主函数执行。所有的go语言都是从main这个包开始执行！
+package main //#声明man包，声明是主函数执行。所有的go语言都是从main这个包开始执行！            强制推荐使用 Go Modules（所有新项目）
 
-import "fmt" //#导入现有的输入输出的框架
+import (
+	"C:\Users\YuFan\go\src\study\db"                 //导入db包
+	"fmt"                      //导入现有的输入输出的框架
+)
 
 func main() { //#func代表一个函数
-	fmt.Println("加油aa")
+	fmt.Println("加油")
 	fmtEnvv := fmt.Sprintf("Environment: %s, Version: %d", "百分号S的参数;后面十进制表示", 0x12)
 	fmt.Println(fmtEnvv)
+
+
+	fmt.Println("Todo list", db.Todos)
 }
 
 /*

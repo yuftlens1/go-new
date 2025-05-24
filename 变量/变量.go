@@ -21,7 +21,11 @@ go语言变量定义：
 var name string = "haha" //写到func main是全局变量，所以它的作用域是整个包。
 var aa string = "aa"
 
-// age := 12   #全局变量不能用:= 定义, 必须写var
+var cc string
+
+// cc = "testcc"   会报错，要么上面定义cc的时候直接赋值    ；    要么将赋值移到函数体内（推荐）
+
+// age := 12   #全局变量不能用:= 定义, 必须写var   包级变量
 
 var ( //单变量
 	namea      = "woqu"
